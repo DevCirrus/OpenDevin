@@ -1,24 +1,21 @@
-# Download and install Mamba (a faster version of conda) if not available yet.
-if ! command -v mamba &> /dev/null; then
-        curl -L -O "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
-        bash Miniforge3-$(uname)-$(uname -m).sh
-fi
+# # Install Node.js
+# sudo apt update
+# sudo apt install -y nodejs
 
-# Install Python 3.11, nodejs, and poetry if not available yet.
-if ! command -v python3.11 &> /dev/null; then
-        mamba install python=3.11
-fi
+# # Install NPM
+# sudo apt install -y npm
 
-if ! command -v node &> /dev/null; then
-        mamba install conda-forge::nodejs
-fi
+# # Install docker
+# sudo apt install -y docker.io
 
-if ! command -v poetry &> /dev/null; then
-        mamba install conda-forge::poetry
-fi
+# # Install poetry
+# curl -sSL https://install.python-poetry.org | python3 -
 
-make build
+sudo apt-get -y update
+sudo apt-get -y install netcat
 
-make setup-config
-
-make run
+# make build
+#
+# make setup-config
+#
+# make run
